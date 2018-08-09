@@ -5,7 +5,7 @@ from . import auth
 from exts import db
 from models import User
 from flask import flash, g, redirect, render_template, request, session, url_for
-from flask_login import login_user
+from flask_login import login_user, logout_user
 from utils.common import is_safe_url
 from werkzeug.exceptions import abort
 
@@ -65,18 +65,17 @@ def login():
 
 # before_request只能应用到属于蓝本的请求上
 # 若要在蓝本中使用针对程序全局请求的钩子，使用before_app_request
-@auth.before_app_request
-def load_logged_in_user():
-    user_id = session.get('user_id')
-
-    if user_id is None:
-        g.user = None
-    else:
-        g.user = User.query.get(user_id)
+# @auth.before_app_request
+# def load_logged_in_user():
+#     user_id = session.get('user_id')
+#
+#     if user_id is None:
+#         g.user = None
+#     else:
+#         g.user = User.query.get(user_id)
 
 
 @auth.route('/logout')
 def logout():
-    session.clear()
-
+    logout_user()
     return redirect(url_for('blog.index'))
