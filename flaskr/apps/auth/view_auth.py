@@ -4,7 +4,7 @@
 from . import auth
 from exts import db
 from models import User
-from flask import flash, g, redirect, render_template, request, session, url_for
+from flask import flash, redirect, render_template, request, url_for
 from flask_login import login_user, logout_user
 from utils.common import is_safe_url
 from werkzeug.exceptions import abort
