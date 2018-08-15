@@ -4,3 +4,5 @@ flask-script
 flask_migrate
 flask_sqlalchemy
 celery
+redis
+eventlet
