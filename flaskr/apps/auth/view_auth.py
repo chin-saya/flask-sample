@@ -10,7 +10,7 @@ from utils.common import is_safe_url
 from werkzeug.exceptions import abort
 
 
-@auth.route('/register', methods=('GET', 'POST'))
+@auth.route('/register/', methods=('GET', 'POST'))
 def register():
     if request.method == 'POST':
         username = request.form.get("username")
@@ -35,7 +35,7 @@ def register():
     return render_template('auth/register.html')
 
 
-@auth.route('/login', methods=('GET', 'POST'))
+@auth.route('/login/', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':
         username = request.form.get("username")
@@ -75,7 +75,7 @@ def login():
 #         g.user = User.query.get(user_id)
 
 
-@auth.route('/logout')
+@auth.route('/logout/')
 def logout():
     logout_user()
     return redirect(url_for('blog.index'))

@@ -16,7 +16,7 @@ def index():
     return render_template('blog/index.html', articles=articles)
 
 
-@blog.route('/create', methods=('GET', 'POST'))
+@blog.route('/create/', methods=('GET', 'POST'))
 @login_required
 def create():
     if request.method == 'POST':
@@ -38,7 +38,7 @@ def create():
     return render_template('blog/create.html')
 
 
-@blog.route('/<int:id>/update', methods=('GET', 'POST'))
+@blog.route('/<int:id>/update/', methods=('GET', 'POST'))
 @login_required
 def update(id):
     article = get_article(id)
@@ -62,7 +62,7 @@ def update(id):
     return render_template('blog/update.html', article=article)
 
 
-@blog.route('/<int:id>/delete', methods=('POST',))
+@blog.route('/<int:id>/delete/', methods=('POST',))
 @login_required
 def delete(id):
     article = get_article(id)
