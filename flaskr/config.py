@@ -8,10 +8,11 @@ import os
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
-"""被login_required拦截的请求地址（request.path），会以查询字符串next=?的方式被传递给重定向视图，从而登录成功后直接访问。
-或者，通过设置USE_SESSION_FOR_NEXT将next添加到session而非url
-
+"""
 USE_SESSION_FOR_NEXT = True
+
+被login_required拦截的请求地址（request.path），会以查询字符串next=?的方式被传递给重定向视图，从而登录成功后直接访问。
+或者，通过设置USE_SESSION_FOR_NEXT将next添加到session而非url
 """
 
 # session配置

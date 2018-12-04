@@ -26,5 +26,9 @@ def create_app():
     app.register_blueprint(blog)
     from .auth import auth
     app.register_blueprint(auth)
+    from .test import test
+    app.register_blueprint(test)
+    from exceptions import exception
+    app.register_blueprint(exception)
 
     return app
