@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-from exts.db import db
+from exts import db
 from flask_login.mixins import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 

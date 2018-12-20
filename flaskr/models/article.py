@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-from exts.db import db
+from exts import db
 from flask_login.mixins import UserMixin
 from datetime import datetime
 from sqlalchemy import ForeignKey

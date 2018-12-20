@@ -1,9 +1,10 @@
 flask
 flask-login
-flask-script
 flask_migrate
 flask_sqlalchemy
 flask-caching
 celery
 redis
 eventlet
+click
+pymysql
