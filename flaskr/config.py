@@ -1,9 +1,7 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
-# set FLASK_APP=flaskr
-# set FLASK_DEBUG=True
-# python3 flaskr/manager.py shell
+
 import os
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -19,5 +17,6 @@ USE_SESSION_FOR_NEXT = True
 SECRET_KEY = "dev"
 
 # 数据库配置
-SQLALCHEMY_DATABASE_URI = r'sqlite:///{}{}flaskr.sqlite'.format(BASE_DIR, os.sep)
+# SQLALCHEMY_DATABASE_URI = r'sqlite:///{}{}flaskr.sqlite'.format(BASE_DIR, os.sep)
+SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:Huawei@123@127.0.0.1:3306/flask_sample?charset=utf8mb4"
 SQLALCHEMY_TRACK_MODIFICATIONS = False

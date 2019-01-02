@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
 
+"""
+set FLASK_APP=flaskr/manager
+set FLASK_DEBUG=True
+flask run
+"""
+
 import click
 import sqlite3
 from contextlib import closing
